@@ -1,7 +1,7 @@
 # pands-project
 
 # Introduction
-The following project contains my analysis of the Iris dataset. This dataset is very well know across the data science community and is looked at as a great starting point for those pursuing a career in data science. This widely known dataset contains five columns (sepal length, sepal width, petal length, petal width and target/species) and one hundred and fifty rows.
+The following project contains my analysis of the Iris dataset. This dataset is very well know across the data science community and is looked at as a great starting point for those pursuing a career in data science. This widely known dataset contains five columns (sepal length, sepal width, petal length, petal width and target/species) and one hundred and fifty rows. 
 
 # Data Cleaning
 Before I was able to explore the dataset I first had to clean it to ensure any outcomes from my analysis were as accurate as possible. First up was converting the 'target' column to a category. This task is done for memory efficiency. For a dataset with 150 rows converting isn't essential but it is important to get into good habbits. Next up I had to account for null values. To do this I used the .fillna() function. This replaces or 'fills' any null values in the columns selected with the value put in the function. I used this rather than .dropna() as that would remove entire rows where there is a null value, due to the size of this dataset I didn't think that would be productive. In the dataset I downloaded there was another column called 'class' which contained null values and didn't contribute to my analysis so used .drop() to delete it and also changed the name of 'target' to 'species' using .rename() as it reads better. Once this data cleaning was complete I used .head() to ensure the changes I made were correctly executed and removed duplicates from dataframe using .drop_duplicates(). Once all this was complete I was happy to get started with my analysis.
@@ -23,3 +23,14 @@ Even though pairplots covered the requested deliverable I also wanted to showcas
 # Additional Analysis - Box Plots
 
 While learning about pairplots I also came across box plots which are used through the library seaborn. I created four of these using species as the X axis and the remaining variables as the Y axis.
+
+# Sources 
+For this project multiple libraries were used in different ways. The different methods I used were learned through lectures throughout the semester, Udemy Courses I had purschased before joining the course and articles read online. 
+
+Articles: 
+https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
+https://eminebozkus.medium.com/exploring-the-iris-flower-dataset-4e000bcc266c
+
+Udemy Courses:
+Data Analysis with Pandas and Python by Boris Paskhaver
+Python for Data Science and Machine Learning Bootcamp by Jose Portilla, Pierian Training
